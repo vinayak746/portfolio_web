@@ -16,24 +16,24 @@ const Hero = () => {
   });
 
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
-      </div>
+    <section id="hero" className="relative overflow-hidden min-h-screen">
+      {/* <div className="absolute top-0 left-0 z-10 w-full h-full">
+        <img src="/images/bg.png" alt="" className="w-full h-full object-cover" />
+      </div> */}
 
-      <div className="hero-layout">
+      <div className="hero-layout flex flex-row items-center justify-between w-full h-screen relative z-20">
         {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-          <div className="flex flex-col gap-7">
+        <header className="flex-1 flex flex-col justify-center md:pl-20 pl-5 pr-5">
+          <div className="flex flex-col gap-7 max-w-2xl">
             <div className="hero-text">
-              <h1>
+              <h1 className="text-5xl md:text-6xl font-bold">
                 Shaping
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
                       <span
                         key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
+                        className="flex items-center md:gap-3 gap-1 pb-4 my-2"
                       >
                         <img
                           src={word.imgPath}
@@ -46,28 +46,28 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1 className="text-5xl md:text-6xl font-bold mt-4">into Real Projects</h1>
+              <h1 className="text-5xl md:text-6xl font-bold mt-4">that Deliver Results</h1>
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Vinayak, a developer from India with a passion for code.
+            <p className="text-white-50 md:text-xl relative z-10">
+            Empowering educational institutions with modern, efficient UIMS solutions for seamless data and process management
             </p>
 
             <Button
-              text="See My Work"
+              text="See Our Work"
               className="md:w-80 md:h-16 w-60 h-12"
               id="counter"
             />
           </div>
         </header>
 
-        {/* RIGHT: 3D Model or Visual */}
-        <figure>
-          <div className="hero-3d-layout">
+        {/* RIGHT: 3D Experience */}
+        <div className="flex-1 h-screen relative">
+          <div className="absolute inset-0">
             <HeroExperience />
           </div>
-        </figure>
+        </div>
       </div>
 
       <AnimatedCounter />

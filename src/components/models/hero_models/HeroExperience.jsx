@@ -1,33 +1,61 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Preload } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
+import { Suspense, useState, useEffect } from "react";
 
 import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
-import { Suspense } from "react";
+
+// Loading component
+const Loader = () => (
+  <div className="flex justify-center items-center h-full">
+    <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
+  </div>
+);
 
 const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Preload assets after initial render
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded) return <Loader />;
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-      {/* deep blue ambient */}
-      <ambientLight intensity={0.2} color="#1a1a40" />
-      {/* Configure OrbitControls to disable panning and control zoom based on device type */}
+    <Canvas
+      camera={{ position: [0, 0, 15], fov: 45 }}
+      dpr={[0.5, 1]} // Reduced pixel ratio for better performance
+      performance={{ min: 0.3 }} // Lower minimum frame rate threshold
+      gl={{
+        antialias: false,
+        powerPreference: "high-performance",
+        alpha: false,
+        precision: "lowp", // Lower precision for better performance
+      }}
+    >
+      <ambientLight intensity={0.15} color="#1a1a40" />
+      
       <OrbitControls
-        enablePan={false} // Prevents panning of the scene
-        enableZoom={!isTablet} // Disables zoom on tablets
-        maxDistance={20} // Maximum distance for zooming out
-        minDistance={5} // Minimum distance for zooming in
-        minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation
-        maxPolarAngle={Math.PI / 2} // Maximum angle for vertical rotation
+        enablePan={false}
+        enableZoom={!isTablet}
+        maxDistance={20}
+        minDistance={5}
+        minPolarAngle={Math.PI / 5}
+        maxPolarAngle={Math.PI / 2}
+        enableDamping
+        dampingFactor={0.03}
+        rotateSpeed={0.5}
       />
 
       <Suspense fallback={null}>
         <HeroLights />
-        <Particles count={100} />
+        <Particles count={isTablet ? 30 : 50} />
         <group
           scale={isMobile ? 0.7 : 1}
           position={[0, -3.5, 0]}
@@ -35,6 +63,7 @@ const HeroExperience = () => {
         >
           <Room />
         </group>
+        <Preload all />
       </Suspense>
     </Canvas>
   );
