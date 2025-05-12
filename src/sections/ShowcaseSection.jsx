@@ -49,7 +49,7 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper w-1/2">
-              <img src="public\images\original-1e209e9f17faa8e4a8262e7abc844b65.webp" alt="Ryde App Interface" />
+              <img src="\images\original-1e209e9f17faa8e4a8262e7abc844b65.webp" alt="Ryde App Interface" />
             </div>
             <div className="text-content">
               <h2>
@@ -75,7 +75,7 @@ const AppShowcase = () => {
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="public\images\original-c6353240f4263b9331e9ec1cc0a20bd8.webp" alt="YC Directory App" />
+                <img src="\images\original-c6353240f4263b9331e9ec1cc0a20bd8.webp" alt="YC Directory App" />
               </div>
               <h2> An Attendance Management App For Schools And Colleges</h2>
             </div>

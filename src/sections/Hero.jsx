@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useState, useEffect } from "react";
 
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
@@ -7,6 +8,23 @@ import { words } from "../constants";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
 
 const Hero = () => {
+  const [showModel, setShowModel] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowModel(window.innerWidth >= 768); // 768px is standard mobile breakpoint
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1",
@@ -63,11 +81,13 @@ const Hero = () => {
         </header>
 
         {/* RIGHT: 3D Experience */}
-        <div className="flex-1 h-screen relative">
-          <div className="absolute inset-0">
-            <HeroExperience />
+        {showModel && (
+          <div className="flex-1 h-screen relative">
+            <div className="absolute inset-0">
+              <HeroExperience />
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <AnimatedCounter />

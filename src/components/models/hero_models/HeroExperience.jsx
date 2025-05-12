@@ -30,16 +30,15 @@ const HeroExperience = () => {
   return (
     <Canvas
       camera={{ position: [0, 0, 15], fov: 45 }}
-      dpr={[0.5, 1]} // Reduced pixel ratio for better performance
-      performance={{ min: 0.3 }} // Lower minimum frame rate threshold
+      dpr={[1, 2]} // Limit pixel ratio for performance
+      performance={{ min: 0.5 }} // Allow frame rate to drop for performance
       gl={{
-        antialias: false,
+        antialias: false, // Disable antialiasing for performance
         powerPreference: "high-performance",
         alpha: false,
-        precision: "lowp", // Lower precision for better performance
       }}
     >
-      <ambientLight intensity={0.15} color="#1a1a40" />
+      <ambientLight intensity={0.2} color="#1a1a40" />
       
       <OrbitControls
         enablePan={false}
@@ -49,8 +48,7 @@ const HeroExperience = () => {
         minPolarAngle={Math.PI / 5}
         maxPolarAngle={Math.PI / 2}
         enableDamping
-        dampingFactor={0.03}
-        rotateSpeed={0.5}
+        dampingFactor={0.05}
       />
 
       <Suspense fallback={null}>
