@@ -40,7 +40,7 @@ function Chatbox() {
     setTyping(true);
 
     try {
-      const res = await fetch("http://localhost:5000/chat", {
+      const res = await fetch("https://chatbox-jcr3.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userMessage }),
@@ -72,16 +72,16 @@ function Chatbox() {
         <div className="w-80 bg-white dark:bg-gray-900 dark:text-white shadow-2xl rounded-lg border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="bg-blue-600 dark:bg-blue-800 text-white p-3 flex justify-between items-center">
-            <span className="font-semibold">Chat with Gemini</span>
+            <span className="font-semibold">Ask Anything</span>
             <div className="flex items-center space-x-2">
-              {/* 4. Toggle button now reliably flips state */}
+              {/* 4. Toggle button now reliably flips state
               <button onClick={() => setIsDark((prev) => !prev)}>
                 {isDark ? (
                   <Sun className="w-5 h-5 " />
                 ) : (
                   <Moon className="w-5 h-5" />
                 )}
-              </button>
+              </button> */}
               <button onClick={() => setOpen(false)}>
                 <X className="w-5 h-5" />
               </button>
