@@ -8,11 +8,11 @@ import ShowcaseSection from "./sections/ShowcaseSection";
 // import LogoShowcase from "./sections/LogoShowcase";
 import FeatureCards from "./sections/FeatureCards";
 import Navbar from "./components/NavBar";
-import Chatbox from "./components/models/chatbox/Chatbox";
 
 const App = () => (
-  <>
+  <div className="min-h-screen transition-all duration-500 bg-black text-white light:bg-white light:text-black">
     <Navbar />
+
     {/* <Chatbox /> */}
     <Hero />
     <ShowcaseSection />
@@ -23,7 +23,7 @@ const App = () => (
     <Testimonials />
     <Contact />
     <Footer />
-  </>
+  </div>
 );
 
 export default App;

@@ -5,27 +5,43 @@ import { navLinks } from "../constants";
 const NavBar = () => {
   // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
+  // track dark mode state
+  const [LightMode, setLightMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme === "light";
+  });
 
   useEffect(() => {
-    // create an event listener for when the user scrolls
     const handleScroll = () => {
-      // check if the user has scrolled down at least 10px
-      // if so, set the state to true
       const isScrolled = window.scrollY > 10;
       setScrolled(isScrolled);
     };
-
-    // add the event listener to the window
     window.addEventListener("scroll", handleScroll);
-
-    // cleanup the event listener when the component is unmounted
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Toggle dark mode and update body class
+  useEffect(() => {
+    const html = document.documentElement;
+    if (LightMode) {
+      html.classList.add("light");
+      localStorage.setItem("theme", "light");
+    } else {
+      html.classList.remove("light");
+      localStorage.setItem("theme", "dark");
+    }
+  }, [LightMode]);
+
+  const handleToggle = () => setLightMode((prev) => !prev);
+
   return (
-    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
-      <div className="inner">
-        <a href="#hero" className="logo">
+    <header
+      className={`navbar ${
+        scrolled ? "scrolled" : "not-scrolled"
+      } bg-black light:bg-white light:text-black`}
+    >
+      <div className="inner ">
+        <a href="#hero" className="logo text-white light:text-black">
           EduLex
         </a>
 
@@ -41,6 +57,14 @@ const NavBar = () => {
             ))}
           </ul>
         </nav>
+
+        <button
+          className="toggle-theme-btn"
+          onClick={handleToggle}
+          aria-label="Toggle dark mode"
+        >
+          {LightMode ? "🌙" : "☀️"}
+        </button>
 
         <a href="#contact" className="contact-btn group">
           <div className="inner">

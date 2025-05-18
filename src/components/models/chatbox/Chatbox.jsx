@@ -104,7 +104,7 @@ function Chatbox() {
             ))}
             {typing && (
               <div className="text-gray-500 dark:text-gray-400 italic animate-pulse">
-                Gemini is typing...
+                AI is typing...
               </div>
             )}
           </div>
