@@ -80,7 +80,7 @@ function Chatbox() {
                   <Sun className="w-5 h-5 " />
                 ) : (
                   <Moon className="w-5 h-5" />
-                )}
+                )} 
               </button> */}
               <button onClick={() => setOpen(false)}>
                 <X className="w-5 h-5" />
