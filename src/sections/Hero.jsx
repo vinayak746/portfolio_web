@@ -81,13 +81,13 @@ const Hero = () => {
         </header>
 
         {/* RIGHT: 3D Experience */}
-        {showModel && (
+        {/* {showModel && (
           <div className="flex-1 h-screen relative">
             <div className="absolute inset-0">
               <HeroExperience />
             </div>
           </div>
-        )}
+        )} */}
       </div>
 
       <AnimatedCounter />

@@ -42,9 +42,11 @@ const NavBar = () => {
           </ul>
         </nav>
 
+       
+
         <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact us</span>
+          <div className="inner font-bold">
+            <span>Request Intro Call</span>
           </div>
         </a>
       </div>
