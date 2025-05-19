@@ -148,41 +148,42 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "They brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+      "Their UIMS platform transformed how we operate. From student enrollment to transcript generation, every feature was thoughtfully designed and incredibly reliable. Their responsiveness and domain knowledge are unmatched.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Development",
+    title: "UIMS Development",
     date: "January 2021 - Present",
     responsibilities: [
-      "Developing and maintaining user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed comprehensive University Information Management Systems for academic institutions, supporting modules such as admissions, academics, examinations.",
+      "Enabled real-time reporting and analytics through dynamic dashboards tailored for administrative and academic decision-makers.",
+      "Ensured high system uptime and data protection using robust role-based access controls and automated backup protocols.",
     ],
   },
   {
     review:
-      "Our contributions to Docker's web applications have been outstanding. They approached challenges with a problem-solving mindset.",
+      "Their admin panel gave us complete control and visibility. From performance reports to daily operations, everything is now centralized and accessible in a few clicks.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Full Stack Development",
+    title: "Admin Panel Development",
     date: "June 2020 - December 2023",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Working with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Designed a unified admin interface for educational institutions, consolidating student, faculty, and department-level operations.",
+      "Built role-specific dashboards for admins, registrars, exam controllers, and department heads.",
+      "Implemented real-time activity tracking, notifications, and action logs to increase transparency and auditability.",
+      "Seamlessly connected modules (e.g., attendance, results, leave requests) via a centralized access panel."
     ],
   },
   {
     review:
-      "Our work on Appwrite’s mobile app brought a high level of quality and efficiency. They delivered solutions that enhanced our mobile experience & meet our product goals.",
+      "Their integration work saved us time and money. We were able to plug in third-party services without any disruption to our operations. The automation reduced manual effort drastically.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "React Native Development",
+    title: "API & Third-Party Integration",
     date: "March 2019 - May 2022",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Integrated payment gateways (JazzCash, EasyPaisa, Stripe) for seamless student fee collection and invoice management.",
+      "Linked the UIMS with biometric attendance systems and RFID-based library management tools.",
+      "Connected SMS/email services for instant notifications regarding attendance, results, and announcements.",
     ],
   },
 ];

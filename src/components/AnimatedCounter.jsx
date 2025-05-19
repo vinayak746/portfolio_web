@@ -34,6 +34,26 @@ const AnimatedCounter = () => {
           numberElement.textContent = `${item.value}${item.suffix}`;
         },
       });
+
+      counter.addEventListener("mouseenter", () => {
+        gsap.to(counter, {
+          scale: 1.1,
+          duration: 0.5,
+          ease: "power2.out",
+          boxShadow: "0 20px 40px rgba(0, 0, 0, 0.4)",
+        });
+      });
+
+      counter.addEventListener("mouseleave", () => {
+        gsap.to(counter, {
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          boxShadow: "none",
+        });
+      });
+
+
     }, counterRef);
   }, []);
 

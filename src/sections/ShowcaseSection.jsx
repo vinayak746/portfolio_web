@@ -40,6 +40,38 @@ const AppShowcase = () => {
           },
         }
       );
+
+      const imageWrapper = card.querySelector('.image-wrapper');
+      const img = imageWrapper.querySelector('img');
+
+      imageWrapper.addEventListener('mouseenter', () => {
+        gsap.to(imageWrapper, {
+          scale: 1.02,
+          backgroundColor: '#2a2a2a',
+          duration: 0.4,
+          ease: 'power2.inOut'
+        });
+        gsap.to(img, {
+          scale: 1.05,
+          duration: 0.4,
+          ease: 'power2.inOut'
+        });
+      });
+
+      imageWrapper.addEventListener('mouseleave', () => {
+        gsap.to(imageWrapper, {
+          scale: 1,
+          backgroundColor: imageWrapper.dataset.originalBg || '#18181b',
+          duration: 0.4,
+          ease: 'power2.inOut'
+        });
+        gsap.to(img, {
+          scale: 1,
+          duration: 0.4,
+          ease: 'power2.inOut'
+        });
+      });
+      
     });
   }, []);
 
@@ -48,17 +80,14 @@ const AppShowcase = () => {
       <div className="w-full">
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper w-1/2">
+            <div className="image-wrapper w-full">
               <img src="\images\original-1e209e9f17faa8e4a8262e7abc844b65.webp" alt="Ryde App Interface" />
             </div>
-            <div className="text-content">
+            <div className="text-content font-extrabold text-xl  hover:bg-white hover:text-black mt-2  rounded-lg w-full my-4  transition-all duration-300">
               <h2>
               An easy-to-use LMS for delivering courses, tracking progress, and enhancing learning experiences.
               </h2>
-              <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
-              </p>
+              
             </div>
           </div>
 
@@ -70,14 +99,20 @@ const AppShowcase = () => {
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
+              <button className="font-extrabold text-xl hover:bg-white hover:text-black rounded-lg w-full py-2 flex items-center justify-center transition-all duration-500 ease-in-out">
+                The Library Management Platform
+              </button>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="\images\original-c6353240f4263b9331e9ec1cc0a20bd8.webp" alt="YC Directory App" />
               </div>
-              <h2> An Attendance Management App For Schools And Colleges</h2>
+
+              <div className="font-extrabold text-xl  hover:bg-white hover:text-black mt-2  rounded-lg w-full py-2 flex items-center justify-center transition-all duration-500 ease-in-out">
+              An Attendance Management Application For Schools,Colleges And organizations
+              </div>
+            
             </div>
           </div>
         </div>
