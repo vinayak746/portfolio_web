@@ -28,7 +28,7 @@ const NavBar = () => {
     >
       <div className="inner ">
         <a href="#hero" className="logo text-white ">
-          EduLex
+          Genkei Solutions
         </a>
 
         <nav className="desktop">
