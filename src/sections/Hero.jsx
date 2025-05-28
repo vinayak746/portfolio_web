@@ -34,18 +34,23 @@ const Hero = () => {
   });
 
   return (
-    <section id="hero" className="relative overflow-hidden min-h-screen">
+    
+    <section id="hero" className="relative overflow-hidden min-h-screen ">
       {/* <div className="absolute top-0 left-0 z-10 w-full h-full">
         <img src="/images/bg.png" alt="" className="w-full h-full object-cover" />
       </div> */}
 
-      <div className="hero-layout flex flex-row items-center justify-between w-full h-screen relative z-20">
+      <div className="hero-layout flex flex-row items-center justify-between w-full h-screen relative z-20 
+      
+      ">
         {/* LEFT: Hero Content */}
         <header className="flex-1 flex flex-col justify-center md:pl-20 pl-5 pr-5">
           <div className="flex flex-col gap-7 max-w-2xl">
             <div className="hero-text">
               <h1 className="text-5xl md:text-6xl font-bold">
                 Shaping
+            
+
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -78,16 +83,24 @@ const Hero = () => {
               id="counter"
             />
           </div>
+
+          
         </header>
 
+        
+
         {/* RIGHT: 3D Experience */}
-        {showModel && (
-          <div className="flex-1 h-screen relative">
-            <div className="absolute inset-0">
-              <HeroExperience />
-            </div>
+        {/* {showModel && (
+          
+        )} */}
+
+<div className="flex-1 h-screen relative m-6 md:block hidden">
+            <img 
+              src="/images/becomes-co-s_FHDDSVp1s-unsplash.jpg" 
+              alt="background" 
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
-        )}
       </div>
 
       <AnimatedCounter />

@@ -6,10 +6,6 @@ const NavBar = () => {
   // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
   // track dark mode state
-  const [LightMode, setLightMode] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme === "light";
-  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,29 +16,13 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Toggle dark mode and update body class
-  useEffect(() => {
-    const html = document.documentElement;
-    if (LightMode) {
-      html.classList.add("light");
-      localStorage.setItem("theme", "light");
-    } else {
-      html.classList.remove("light");
-      localStorage.setItem("theme", "dark");
-    }
-  }, [LightMode]);
-
-  const handleToggle = () => setLightMode((prev) => !prev);
-
   return (
     <header
-      className={`navbar ${
-        scrolled ? "scrolled" : "not-scrolled"
-      } bg-black light:bg-white light:text-black`}
+      className={`navbar ${scrolled ? "scrolled" : "not-scrolled"} bg-black `}
     >
       <div className="inner ">
         <a href="#hero" className="logo text-white light:text-black">
-          Genkei Solutions
+          EduLex
         </a>
 
         <nav className="desktop">
@@ -58,17 +38,17 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <button
+        {/* <button
           className="toggle-theme-btn"
           onClick={handleToggle}
           aria-label="Toggle dark mode"
         >
           {LightMode ? "🌙" : "☀️"}
-        </button>
+        </button> */}
 
         <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact us</span>
+          <div className="inner font-bold ">
+            <span>Request Intro Call</span>
           </div>
         </a>
       </div>

@@ -101,13 +101,13 @@ const Experience = () => {
         />
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
-            {expCards.map((card) => (
+            {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
                   <GlowCard card={card}>
-                    <div>
+                    {/* <div>
                       <img src={card.imgPath} alt="exp-img" />
-                    </div>
+                    </div> */}
                   </GlowCard>
                 </div>
                 <div className="xl:w-4/6">
@@ -118,7 +118,7 @@ const Experience = () => {
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                       <div className="timeline-logo">
-                        <img src={card.logoPath} alt="logo" />
+                        <div className={`purple-circle circle-${index}`}></div>
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>
