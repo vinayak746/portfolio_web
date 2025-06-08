@@ -31,7 +31,7 @@ const Navbar = () => (
   </nav>
 );
 
-const Section = ({ title, children }) => (
+const Section = ({ title, children, id }) => (
   <div
     style={{
       background: "#181818",
@@ -41,6 +41,7 @@ const Section = ({ title, children }) => (
       color: "#fff",
       boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
     }}
+    id={id}
   >
     <h2 style={{ borderBottom: "1px solid #333", paddingBottom: "0.5rem" }}>
       {title}
@@ -77,7 +78,7 @@ const WebDevelopment = () => {
           one ensures your project is tailored to your needs, whether you want a
           stunning user interface, robust backend, or a complete solution.
         </p>
-        <Section title="Frontend Development">
+        <Section id="frontend" title="Frontend Development">
           <b>Frontend Development</b> focuses on everything users see and
           interact with. We craft visually appealing, intuitive, and responsive
           interfaces using modern technologies like React. Our team ensures your
@@ -109,7 +110,7 @@ const WebDevelopment = () => {
           <b>Why choose us?</b> We prioritize security, efficiency, and
           future-proofing, so your UIMS is ready for anything.
         </Section>
-        <Section title="Full Stack Development">
+        <Section id="fullStack" title="Full Stack Development">
           <b>Full Stack Development</b> gives you the best of both worlds: a
           beautiful frontend and a powerful backend, working together
           seamlessly. We handle the entire process, from design to deployment,
@@ -135,6 +136,9 @@ const WebDevelopment = () => {
           Select the service that best fits your UIMS project needs. With us,
           you get expertise, dedication, and results you can trust.
         </p>
+      </div>
+      <div id="test">
+        <h1>test</h1>
       </div>
       <Footer />
     </div>

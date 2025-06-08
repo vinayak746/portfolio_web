@@ -62,24 +62,24 @@ const NavBar = () => {
                   </button>
                   <ul className="absolute top-0 left-full mt-0 w-48 bg-black text-white rounded shadow-lg hidden group-hover/webdev:block transition-all duration-200 z-50">
                     <li>
-                      <a
-                        href="#frontend"
+                      <Link
+                        to="/web-development/#frontend"
                         className="block px-4 py-2 hover:bg-gray-800"
                       >
                         Frontend
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a
                         href="#backend"
                         className="block px-4 py-2 hover:bg-gray-800"
                       >
-                        Backend
+                        <Link to="web-development">Backend</Link>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#fullstack"
+                        href="/web-development/#fullStack"
                         className="block px-4 py-2 hover:bg-gray-800"
                       >
                         Full Stack
@@ -98,27 +98,20 @@ const NavBar = () => {
                   </button>
                   <ul className="absolute top-0 left-full mt-0 w-48 bg-black text-white rounded shadow-lg hidden group-hover/management:block transition-all duration-200 z-50">
                     <li>
-                      <a
-                        href="#uims"
-                        className="block px-4 py-2 hover:bg-gray-800"
-                      >
-                        UIMS Management
+                      <a className="block px-4 py-2 hover:bg-gray-800">
+                        <Link to="management-systems">UIMS Management</Link>
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#library"
-                        className="block px-4 py-2 hover:bg-gray-800"
-                      >
-                        Library Management
+                      <a className="block px-4 py-2 hover:bg-gray-800">
+                        <Link to="management-systems">Library Management</Link>
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#inventory"
-                        className="block px-4 py-2 hover:bg-gray-800"
-                      >
-                        Inventory Management
+                      <a className="block px-4 py-2 hover:bg-gray-800">
+                        <Link to="management-systems">
+                          Inventory Management
+                        </Link>
                       </a>
                     </li>
                   </ul>
@@ -170,28 +163,28 @@ const NavBar = () => {
                   </button>
                   <ul className="absolute top-0 left-full mt-0 w-48 bg-black text-white rounded shadow-lg hidden group-hover/cloud:block transition-all duration-200 z-50">
                     <li>
-                      <a
-                        href="#aws"
+                      <Link
+                        to="cloud-computing"
                         className="block px-4 py-2 hover:bg-gray-800"
                       >
                         AWS
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#azure"
+                      <Link
+                        to="cloud-computing"
                         className="block px-4 py-2 hover:bg-gray-800"
                       >
                         Azure
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#gcp"
+                      <Link
+                        to="cloud-computing"
                         className="block px-4 py-2 hover:bg-gray-800"
                       >
                         Google Cloud
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
