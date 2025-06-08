@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MangementSystems from "./pages/MangementSystems";
 import WebDevelopment from "./pages/WebDevelopment";
@@ -6,7 +6,7 @@ import UiUx from "./pages/UiUx";
 import CloudServices from "./pages/CloudServices";
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <div className="min-h-screen transition-all duration-500 bg-black text-white light:bg-white light:text-black">
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ const App = () => (
         <Route path="/cloud-computing" element={<CloudServices />} />
       </Routes>
     </div>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;
