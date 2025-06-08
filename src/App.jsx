@@ -1,29 +1,22 @@
-import Testimonials from "./sections/Testimonials";
-import Footer from "./sections/Footer";
-import Contact from "./sections/Contact";
-import TechStack from "./sections/TechStack";
-import Experience from "./sections/Experience";
-import Hero from "./sections/Hero";
-import ShowcaseSection from "./sections/ShowcaseSection";
-// import LogoShowcase from "./sections/LogoShowcase";
-import FeatureCards from "./sections/FeatureCards";
-import Navbar from "./components/NavBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import MangementSystems from "./pages/MangementSystems";
+import WebDevelopment from "./pages/WebDevelopment";
+import UiUx from "./pages/UiUx";
+import CloudServices from "./pages/CloudServices";
 
 const App = () => (
-  <div className="min-h-screen transition-all duration-500 bg-black text-white light:bg-white light:text-black">
-    <Navbar />
-
-    {/* <Chatbox /> */}
-    <Hero />
-    <ShowcaseSection />
-    {/* <LogoShowcase /> */}
-    <FeatureCards />
-    <Experience />
-    <TechStack />
-    <Testimonials />
-    <Contact />
-    <Footer />
-  </div>
+  <Router>
+    <div className="min-h-screen transition-all duration-500 bg-black text-white light:bg-white light:text-black">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/management-systems" element={<MangementSystems />} />
+        <Route path="/web-development" element={<WebDevelopment />} />
+        <Route path="/ui-ux" element={<UiUx />} />
+        <Route path="/cloud-computing" element={<CloudServices />} />
+      </Routes>
+    </div>
+  </Router>
 );
 
 export default App;
