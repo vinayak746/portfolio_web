@@ -98,7 +98,7 @@ const Hero = () => {
             <img 
               src="/images/becomes-co-s_FHDDSVp1s-unsplash.jpg" 
               alt="background" 
-              className="w-full h-3/4 object-cover  rounded-lg"
+              className="w-full h-5/6 object-cover  rounded-lg"
             />
           </div>
       </div>
