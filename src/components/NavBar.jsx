@@ -27,8 +27,15 @@ const NavBar = () => {
       } bg-black `}
     >
       <div className="inner ">
-        <a href="#hero" className="logo text-white ">
-          Genkei Solution
+        <a href="#hero" className="logo text-white flex items-center">
+          <div className="w-42 h-22 mr-2">
+            <img 
+              src="\images\logos\generated-image (1).png"
+              alt="Genkei Solution Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+     
         </a>
 
         <nav className="desktop">
@@ -36,7 +43,7 @@ const NavBar = () => {
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group">
                 <a href={link}>
-                  <span>{name}</span>
+                  <span className="text-lg font-bold,">{name}</span>
                   <span className="underline" />
                 </a>
               </li>

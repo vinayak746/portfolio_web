@@ -94,11 +94,11 @@ const Hero = () => {
           
         )} */}
 
-<div className="flex-1 h-screen relative m-6 md:block hidden">
+<div className="flex-1 h-screen relative m-6 md:block hidden ">
             <img 
               src="/images/becomes-co-s_FHDDSVp1s-unsplash.jpg" 
               alt="background" 
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-3/4 object-cover  rounded-lg"
             />
           </div>
       </div>

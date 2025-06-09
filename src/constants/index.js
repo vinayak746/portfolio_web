@@ -205,46 +205,46 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about EduLex. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+    name: "Rajesh Kumar",
+    mentions: "@rajeshkumar",
+    review: "The college management system developed by Genkei Solutions has revolutionized our administrative processes. The seamless integration of attendance, examination, and fee management modules has significantly improved our operational efficiency. Their attention to detail and understanding of educational workflows is commendable.",
     imgPath: "/images/client1.png",
+    rating: 5
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with EduLex was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+    name: "Praful Sharma",
+    mentions: "@prafulsharma",
+    review: "As the IT Director of our university, I was impressed by the cloud infrastructure solutions provided by Genkei Solutions. Their migration strategy was flawless, and the new system has improved our data accessibility while maintaining robust security protocols. A truly professional team!",
     imgPath: "/images/client3.png",
+    rating: 4
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with EduLex was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Arjun Mehta",
+    mentions: "@arjunmehta",
+    review: "The web development team at Genkei Solutions delivered an exceptional e-learning platform for our institution. The user interface is intuitive, and the backend architecture is scalable. Their regular updates and maintenance support have been invaluable to our digital transformation journey.",
     imgPath: "/images/client2.png",
+    rating: 4
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "EduLex was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+    name: "Rahul Verma",
+    mentions: "@rahulverma",
+    review: "Working with Genkei Solutions on our student portal was a game-changer. The system's ability to handle thousands of concurrent users during admission season is remarkable. Their understanding of educational technology needs is truly impressive.",
     imgPath: "/images/client5.png",
+    rating: 5
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "EduLex's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+    name: "Vikram Singh",
+    mentions: "@vikramsingh",
+    review: "The cloud-based ERP solution developed by Genkei Solutions has streamlined our entire college operations. From admission to alumni management, every module works seamlessly. Their team's expertise in educational technology is outstanding.",
     imgPath: "/images/client4.png",
+    rating: 3.5
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "EduLex was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+    name: "Dr. Sanjay Malhotra",
+    mentions: "@sanjaymalhotra",
+    review: "As the Dean of our engineering college, I can confidently say that Genkei Solutions has transformed our digital infrastructure. Their custom-built management system has improved our administrative efficiency by 60%. Their post-deployment support is exceptional.",
     imgPath: "/images/client6.png",
+    rating: 4.5
   },
 ];
 

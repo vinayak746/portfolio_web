@@ -84,9 +84,9 @@ const AppShowcase = () => {
               <img src="\images\original-1e209e9f17faa8e4a8262e7abc844b65.webp" alt="Ryde App Interface" />
             </div>
             <div className="text-content font-extrabold text-xl  hover:bg-white hover:text-black mt-2  rounded-lg w-full my-4  transition-all duration-300">
-              <h2>
+              <h4>
               An easy-to-use LMS for delivering courses, tracking progress, and enhancing learning experiences.
-              </h2>
+              </h4>
               
             </div>
           </div>
