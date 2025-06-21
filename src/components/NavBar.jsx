@@ -39,31 +39,34 @@ const NavBar = () => {
 
   return (
     <header
-      className={`navbar ${scrolled ? "bg-zinc-800 opacity-95 " : "bg-black"}  `}
+      className={`navbar ${
+        scrolled ? "bg-zinc-800 opacity-95 " : "bg-black"
+      }  `}
     >
       <div className="inner   ">
-
         <a href="#hero" className="logo text-white flex items-center">
           <div className="w-36 h-18 mr-2">
-            <img 
-              src="\images\logos\generated-image (1).png"
+            <img
+              src="./public/images/logos/genkei_logo_try_1.png"
               alt="Genkei Solution Logo"
               className="w-full h-full object-cover"
             />
           </div>
-          </a>
-     
-
-        
+        </a>
 
         <nav className="desktop">
           <ul>
-           
             {/* Services Dropdown */}
             <li className="group relative ">
               <button className="text-white hover:cursor-pointer flex items-center gap-1 px-4 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:text-black">
                 Services
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="transition-transform duration-300 group-hover:rotate-180">
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  className="transition-transform duration-300 group-hover:rotate-180"
+                >
                   <path
                     d="M1 1L6 6L11 1"
                     stroke="currentColor"
@@ -215,7 +218,6 @@ const NavBar = () => {
           </ul>
         </nav>
 
-
         <a href="#contact" className="contact-btn group">
           <div className="inner font-bold w-80 flex items-center justify-center hover:bg-zinc-700">
             <span className="text-lg">Request Intro Call</span>
@@ -224,12 +226,17 @@ const NavBar = () => {
 
         <nav className="desktop">
           <ul>
-           
             {/* Services Dropdown */}
             <li className="group relative">
               <button className="text-white flex hover:cursor-pointer items-center gap-1 px-4 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:text-black">
                 Why us
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="transition-transform duration-300 group-hover:rotate-180">
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  className="transition-transform duration-300 group-hover:rotate-180"
+                >
                   <path
                     d="M1 1L6 6L11 1"
                     stroke="currentColor"
@@ -248,7 +255,6 @@ const NavBar = () => {
                       <ChevronRightIcon />
                     </span>
                   </button>
-                
                 </li>
 
                 {/* Management Systems */}
@@ -259,67 +265,60 @@ const NavBar = () => {
                       <ChevronRightIcon />
                     </span>
                   </button>
-                  
                 </li>
-
               </ul>
             </li>
           </ul>
         </nav>
 
-
-
         {/* Hamburger Menu */}
-        <div 
+        <div
           className="relative"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <button 
-            className="p-2 text-black bg-white    hover:cursor-pointer rounded-md transition-all duration-300 ease-in-out group"
-          >
-            <Menu 
-              size={24} 
+          <button className="p-2 text-black bg-white    hover:cursor-pointer rounded-md transition-all duration-300 ease-in-out group">
+            <Menu
+              size={24}
               className={`transform transition-transform duration-300 ease-in-out ${
-                isMenuOpen ? 'rotate-90' : 'rotate-0'
+                isMenuOpen ? "rotate-90" : "rotate-0"
               } group-hover:scale-110`}
             />
           </button>
-          
-          <div 
+
+          <div
             className={`absolute right-0 mt-2 w-48 bg-black text-white rounded-md shadow-lg py-2 z-50 transform transition-all duration-300 ease-in-out ${
-              isMenuOpen 
-                ? 'opacity-100 translate-y-0 visible' 
-                : 'opacity-0 -translate-y-2 invisible'
+              isMenuOpen
+                ? "opacity-100 translate-y-0 visible"
+                : "opacity-0 -translate-y-2 invisible"
             }`}
           >
-            <a 
-              href="#work" 
+            <a
+              href="#work"
               className="block px-4 py-2 hover:bg-gray-800 transition-all duration-200 ease-in-out transform hover:translate-x-2 hover:scale-105"
             >
               Work
             </a>
-            <a 
-              href="#experience" 
+            <a
+              href="#experience"
               className="block px-4 py-2 hover:bg-gray-800 transition-all duration-200 ease-in-out transform hover:translate-x-2 hover:scale-105"
             >
               Experience
             </a>
-            <a 
-              href="#skills" 
+            <a
+              href="#skills"
               className="block px-4 py-2 hover:bg-gray-800 transition-all duration-200 ease-in-out transform hover:translate-x-2 hover:scale-105"
             >
               Skills
             </a>
-            <a 
-              href="#testimonials" 
+            <a
+              href="#testimonials"
               className="block px-4 py-2 hover:bg-gray-800 transition-all duration-200 ease-in-out transform hover:translate-x-2 hover:scale-105"
             >
               Testimonials
             </a>
           </div>
         </div>
-        
       </div>
     </header>
   );
