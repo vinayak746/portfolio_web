@@ -47,7 +47,7 @@ const NavBar = () => {
         <a href="#hero" className="logo text-white flex items-center">
           <div className="w-36 h-18 mr-2">
             <img
-              src="/images/logos/genkei_logo_try_1.png"
+              src="/images/logos/genkei_logo_try.png"
               alt="Genkei Solution Logo"
               className="w-full h-full object-cover"
             />
